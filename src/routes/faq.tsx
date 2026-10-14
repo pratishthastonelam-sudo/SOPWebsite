@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -27,11 +27,18 @@ export const Route = createFileRoute("/faq")({
       },
     ],
   }),
+  validateSearch: (s: Record<string, unknown>): { q?: string } => ({
+    q: typeof s.q === "string" ? s.q : undefined,
+  }),
   component: FaqPage,
 });
 
 function FaqPage() {
-  const [query, setQuery] = useState("");
+  const { q: initialQ } = Route.useSearch();
+  const [query, setQuery] = useState(initialQ ?? "");
+  useEffect(() => {
+    if (initialQ !== undefined) setQuery(initialQ);
+  }, [initialQ]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();

@@ -276,7 +276,7 @@ export function SopView({ audience, eyebrow, intro, content }: Props) {
                           </ul>
                         </div>
                       )}
-                      {p.embed === "video" && <VideoShowcase />}
+                      {p.embed === "video" && <VideoShowcase id={p.videoId ?? YOUTUBE_ID} />}
                       {p.embed === "microsite" && <MicrositeEmbed />}
                       {p.embed === "sampleDisplay" && <SampleDisplay />}
                     </div>
@@ -550,8 +550,8 @@ function SampleDisplay() {
   );
 }
 
-function VideoShowcase() {
-  const watchUrl = `https://youtu.be/${YOUTUBE_ID}`;
+function VideoShowcase({ id }: { id: string }) {
+  const watchUrl = `https://youtu.be/${id}`;
   return (
     <figure className="mt-4 overflow-hidden rounded-xl border border-border">
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-accent/40 px-4 py-2">
@@ -569,7 +569,7 @@ function VideoShowcase() {
       </div>
       <div className="relative aspect-video w-full bg-black">
         <iframe
-          src={`https://www.youtube.com/embed/${YOUTUBE_ID}?rel=0`}
+          src={`https://www.youtube.com/embed/${id}?rel=0`}
           title="Stonelam video showcase"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ChevronDown } from "lucide-react";
+import { SiteSearch } from "@/components/site-search";
 
 export function SiteHeader() {
   return (
@@ -44,6 +45,8 @@ export function SiteHeader() {
           <NavLink to="/resources">Resources</NavLink>
           <NavLink to="/faq">FAQ</NavLink>
         </nav>
+
+        <SiteSearch />
 
       </div>
     </header>

@@ -10,6 +10,7 @@ export type PhaseStep = {
   rules?: string[];
   points?: { title: string; quotes: string[] }[];
   embed?: "video" | "microsite" | "sampleDisplay";
+  videoId?: string;
 };
 
 export type FollowUpTemplate = {
@@ -333,6 +334,7 @@ export const architectsSop: SopContent = {
         "Stonelam 3mm removes those constraints.",
       ],
       embed: "video",
+      videoId: "YcxHT8zAUvY",
     },
     {
       n: 4,

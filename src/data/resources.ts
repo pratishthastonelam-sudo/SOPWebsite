@@ -2,10 +2,6 @@ import ecatalogue from "@/assets/docs/E-catalogue.pdf.asset.json";
 import cert from "@/assets/docs/certification_booklet.pdf.asset.json";
 import twelvemm from "@/assets/docs/12MM_COLLECTION_compressed.pdf.asset.json";
 import elegante from "@/assets/docs/ELEGANTE_SERIES_3MM_compressed.pdf.asset.json";
-import commercial from "@/assets/docs/Stonelam_Commercial_Project.pdf.asset.json";
-import hospitality from "@/assets/docs/Hospitality_Projects.pdf.asset.json";
-import residential from "@/assets/docs/Stonelam_Residential_Images.pdf.asset.json";
-import healthcare from "@/assets/docs/Healthcare_Projects.pdf.asset.json";
 
 export type ResourceGroupId =
   | "certification"
@@ -38,29 +34,29 @@ export const resources: Resource[] = [
     title: "Commercial Projects",
     description: "Reference book of Stonelam commercial installations.",
     group: "portfolios",
-    url: commercial.url,
-    size: mb(commercial.size),
+    url: "/docs/Commercial_Projects.pdf",
+    size: mb(21588977),
   },
   {
     title: "Hospitality Projects",
     description: "Stonelam installations across hotels, restaurants and hospitality venues.",
     group: "portfolios",
-    url: hospitality.url,
-    size: mb(hospitality.size),
+    url: "/docs/Hospitality_Projects.pdf",
+    size: mb(14121953),
   },
   {
     title: "Healthcare Projects",
     description: "Hygiene-focused, non-porous applications for healthcare spaces.",
     group: "portfolios",
-    url: healthcare.url,
-    size: mb(healthcare.size),
+    url: "/docs/Healthcare_Projects.pdf",
+    size: mb(6618782),
   },
   {
     title: "Residential Projects",
     description: "Residential applications: kitchens, walls, façades and more.",
     group: "portfolios",
-    url: residential.url,
-    size: mb(residential.size),
+    url: "/docs/Residential_Projects.pdf",
+    size: mb(12439260),
   },
 
   // Product catalogues
@@ -111,7 +107,7 @@ export const resourceGroups: {
     id: "portfolios",
     title: "Project Portfolios",
     description:
-      "Commercial, healthcare and residential reference projects — real installations at scale.",
+      "Commercial, hospitality, healthcare and residential reference projects — real installations at scale.",
   },
   {
     id: "catalogues",
@@ -127,6 +123,9 @@ export const resourceGroups: {
 
 export const externalResourceLinks = {
   marketingIp:
+    "https://drive.google.com/drive/folders/1aHuaY8lduMU3H4woX1gb9SzzUnMWpVce?usp=drive_link",
+  // TODO: swap for the dedicated "Behind the Buildingskins" Drive link
+  behindTheBuildingskins:
     "https://drive.google.com/drive/folders/1aHuaY8lduMU3H4woX1gb9SzzUnMWpVce?usp=drive_link",
   imageRepository:
     "https://drive.google.com/drive/folders/1qvRicGNG9lwZpimudYhEHyRS-sTHG0Fj?usp=drive_link",
