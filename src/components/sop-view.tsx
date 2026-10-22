@@ -25,7 +25,6 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { SopContent } from "@/data/sop";
 import { competitorFoolproofing } from "@/data/sop";
-import elegante from "@/assets/docs/ELEGANTE_SERIES_3MM_compressed.pdf.asset.json";
 
 const YOUTUBE_ID = "KhWSYWcbXiU";
 const MICROSITE_URL = "https://stonelam-facade-calculator2026.netlify.app/#calculator";
@@ -505,7 +504,7 @@ function SampleDisplay() {
 
         <TabsContent value="elegante" className="mt-4 space-y-4">
           <a
-            href={elegante.url}
+            href="/docs/ELEGANTE_SERIES_3MM_compressed.pdf"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow-sm transition hover:opacity-90"
