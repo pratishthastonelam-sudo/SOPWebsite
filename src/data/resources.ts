@@ -1,7 +1,3 @@
-import ecatalogue from "@/assets/docs/E-catalogue.pdf.asset.json";
-import cert from "@/assets/docs/certification_booklet.pdf.asset.json";
-import twelvemm from "@/assets/docs/12MM_COLLECTION_compressed.pdf.asset.json";
-import elegante from "@/assets/docs/ELEGANTE_SERIES_3MM_compressed.pdf.asset.json";
 
 export type ResourceGroupId =
   | "certification"
@@ -25,8 +21,8 @@ export const resources: Resource[] = [
     title: "Certification Booklet",
     description: "Test reports, certifications and technical compliance.",
     group: "certification",
-    url: cert.url,
-    size: mb(cert.size),
+    url: "/docs/certification_booklet.pdf",
+    size: mb(11188057),
   },
 
   // Project portfolios
@@ -64,8 +60,8 @@ export const resources: Resource[] = [
     title: "Elegante Series — 3mm",
     description: "Lightweight 3mm slabs for façades, walls and interiors.",
     group: "catalogues",
-    url: elegante.url,
-    size: mb(elegante.size),
+    url: "/docs/ELEGANTE_SERIES_3MM_compressed.pdf",
+    size: mb(889895),
   },
   {
     title: "Regenza Series — 5mm",
@@ -78,8 +74,8 @@ export const resources: Resource[] = [
     title: "12mm Collection",
     description: "Full-body 12mm slabs for countertops and heavy-duty applications.",
     group: "catalogues",
-    url: twelvemm.url,
-    size: mb(twelvemm.size),
+    url: "/docs/12MM_COLLECTION_compressed.pdf",
+    size: mb(1920416),
   },
 
   // E-brochure
@@ -87,8 +83,8 @@ export const resources: Resource[] = [
     title: "E-Catalogue",
     description: "The complete Stonelam product e-brochure.",
     group: "ebrochure",
-    url: ecatalogue.url,
-    size: mb(ecatalogue.size),
+    url: "/docs/E-catalogue.pdf",
+    size: mb(10824936),
   },
 ];
 
